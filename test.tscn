@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://edahk7u2jyh"]
+
+[ext_resource type="PackedScene" uid="uid://0jaqb8ewimo3" path="res://scenes/letters/UpperCase/LetterZ.tscn" id="1_37kl0"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LetterZ" parent="." instance=ExtResource("1_37kl0")]
+offset_left = 461.0
+offset_top = -40.0
+offset_right = 712.0
+offset_bottom = 682.0
