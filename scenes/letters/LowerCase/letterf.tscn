@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://djqok1vriruan"]
+
+[ext_resource type="Theme" uid="uid://cyx1ngbtbpcvo" path="res://alphabet.tres" id="1_cgex3"]
+[ext_resource type="PackedScene" uid="uid://c4yxhounmxx8v" path="res://scenes/components/vertical slider Component.tscn" id="2_hwwno"]
+[ext_resource type="PackedScene" uid="uid://b5aji4m6788l3" path="res://scenes/components/horizontal slider Component.tscn" id="3_0jatk"]
+[ext_resource type="PackedScene" uid="uid://cikkfswae2ji1" path="res://scenes/components/Circle slider component.tscn" id="4_qo3fk"]
+
+[node name="Letterf" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme = ExtResource("1_cgex3")
+text = "f"
+
+[node name="CircleSliderComponent" parent="." instance=ExtResource("4_qo3fk")]
+layout_mode = 1
+offset_left = 103.0
+offset_top = -176.0
+offset_right = 214.0
+offset_bottom = -21.0
+rotation = 1.58807
+halfCircle = true
+debug = false
+
+[node name="vertical slider Component" parent="." instance=ExtResource("2_hwwno")]
+layout_mode = 1
+offset_left = -53.0
+offset_top = -127.0
+offset_right = -14.0
+offset_bottom = 127.0
+
+[node name="horizontal Slider Component" parent="." instance=ExtResource("3_0jatk")]
+layout_mode = 1
+offset_left = -20.0
+offset_top = -71.0
+offset_right = 74.0
+offset_bottom = -42.0

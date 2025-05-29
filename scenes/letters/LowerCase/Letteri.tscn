@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://uvs67oni4o81"]
+
+[ext_resource type="Theme" uid="uid://cyx1ngbtbpcvo" path="res://alphabet.tres" id="1_cbo2t"]
+[ext_resource type="PackedScene" uid="uid://c4yxhounmxx8v" path="res://scenes/components/vertical slider Component.tscn" id="2_1ho3g"]
+[ext_resource type="PackedScene" uid="uid://cikkfswae2ji1" path="res://scenes/components/Circle slider component.tscn" id="3_k8jhe"]
+
+[node name="Label" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme = ExtResource("1_cbo2t")
+text = "i"
+
+[node name="vertical slider Component" parent="." instance=ExtResource("2_1ho3g")]
+layout_mode = 1
+offset_left = -17.0
+offset_top = -85.0
+offset_right = 17.0
+offset_bottom = 129.0
+
+[node name="CircleSliderComponent" parent="." instance=ExtResource("3_k8jhe")]
+layout_mode = 1
+offset_left = -24.0
+offset_top = -172.0
+offset_right = 24.0
+offset_bottom = -125.0
+debug = false
