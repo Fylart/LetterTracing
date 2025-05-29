@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2rkbywnml4wq"]
+
+[ext_resource type="Theme" uid="uid://cyx1ngbtbpcvo" path="res://alphabet.tres" id="1_bmaft"]
+[ext_resource type="PackedScene" uid="uid://cikkfswae2ji1" path="res://scenes/components/Circle slider component.tscn" id="2_1ljle"]
+
+[node name="Label" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme = ExtResource("1_bmaft")
+text = "o"
+
+[node name="CircleSliderComponent" parent="." instance=ExtResource("2_1ljle")]
+layout_mode = 1
+offset_left = -104.5
+offset_top = -92.0
+offset_right = 103.5
+offset_bottom = 133.0
+debug = false
