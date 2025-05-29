@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c4yxhounmxx8v" path="res://scenes/components/vertical slider Component.tscn" id="2_o6lr0"]
 
 [node name="Label" type="Label"]
+clip_children = 2
 offset_right = 40.0
 offset_bottom = 23.0
 theme = ExtResource("1_vlca8")
