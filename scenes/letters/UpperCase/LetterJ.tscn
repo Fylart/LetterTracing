@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://biooifhtnevmj"]
+[gd_scene load_steps=5 format=3 uid="uid://biooifhtnevmj"]
 
 [ext_resource type="Theme" uid="uid://cyx1ngbtbpcvo" path="res://alphabet.tres" id="1_qyuw1"]
+[ext_resource type="Script" uid="uid://dwcl3pmyi6rvl" path="res://scenes/letters/letters.gd" id="2_byvax"]
 [ext_resource type="PackedScene" uid="uid://c4yxhounmxx8v" path="res://scenes/components/vertical slider Component.tscn" id="2_cbis7"]
 [ext_resource type="PackedScene" uid="uid://cikkfswae2ji1" path="res://scenes/components/Circle slider component.tscn" id="3_byvax"]
 
@@ -19,6 +20,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_qyuw1")
 text = "J"
+script = ExtResource("2_byvax")
 
 [node name="vertical slider Component" parent="." instance=ExtResource("2_cbis7")]
 layout_mode = 1
@@ -34,6 +36,7 @@ offset_top = -12.0
 offset_right = 200.5
 offset_bottom = 166.0
 rotation = 1.5708
+orderID = 1
 halfCircle = true
 restart = false
 reverse = false

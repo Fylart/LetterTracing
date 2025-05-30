@@ -25,6 +25,7 @@ offset_top = 135.0
 offset_right = 245.5
 offset_bottom = 272.0
 rotation = 3.14159
+halfCircle = true
 restart = false
 reverse = false
 debug = false
@@ -35,6 +36,7 @@ offset_left = 44.5
 offset_top = -89.0
 offset_right = 82.5
 offset_bottom = 124.0
+orderID = 1
 
 [node name="horizontal Slider Component2" parent="." instance=ExtResource("2_burte")]
 layout_mode = 1

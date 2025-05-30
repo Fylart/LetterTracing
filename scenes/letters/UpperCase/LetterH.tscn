@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://65fbt32ar8k4"]
+[gd_scene load_steps=5 format=3 uid="uid://65fbt32ar8k4"]
 
 [ext_resource type="Theme" uid="uid://cyx1ngbtbpcvo" path="res://alphabet.tres" id="1_kafeh"]
 [ext_resource type="PackedScene" uid="uid://c4yxhounmxx8v" path="res://scenes/components/vertical slider Component.tscn" id="2_jgvtc"]
+[ext_resource type="Script" uid="uid://dwcl3pmyi6rvl" path="res://scenes/letters/letters.gd" id="2_nmnr1"]
 [ext_resource type="PackedScene" uid="uid://b5aji4m6788l3" path="res://scenes/components/horizontal slider Component.tscn" id="3_nmnr1"]
 
 [node name="LetterH" type="Label"]
@@ -19,6 +20,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_kafeh")
 text = "H"
+script = ExtResource("2_nmnr1")
 
 [node name="vertical slider Component" parent="." instance=ExtResource("2_jgvtc")]
 layout_mode = 1
@@ -33,6 +35,7 @@ offset_left = 70.0
 offset_top = -181.0
 offset_right = 139.0
 offset_bottom = 128.0
+orderID = 1
 
 [node name="horizontal Slider Component" parent="." instance=ExtResource("3_nmnr1")]
 layout_mode = 1
@@ -40,3 +43,4 @@ offset_left = -94.0
 offset_top = -40.0
 offset_right = 70.0
 offset_bottom = 8.0
+orderID = 2

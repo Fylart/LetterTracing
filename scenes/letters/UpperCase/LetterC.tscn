@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0lbmia44r8kd"]
+[gd_scene load_steps=4 format=3 uid="uid://d0lbmia44r8kd"]
 
 [ext_resource type="Theme" uid="uid://cyx1ngbtbpcvo" path="res://alphabet.tres" id="1_5jmwg"]
 [ext_resource type="PackedScene" uid="uid://cikkfswae2ji1" path="res://scenes/components/Circle slider component.tscn" id="2_jcs30"]
+[ext_resource type="Script" uid="uid://dwcl3pmyi6rvl" path="res://scenes/letters/letters.gd" id="2_sw5o2"]
 
 [node name="LetterC" type="Label"]
 clip_children = 2
@@ -18,6 +19,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_5jmwg")
 text = "C"
+script = ExtResource("2_sw5o2")
 
 [node name="CircleSliderComponent" parent="." instance=ExtResource("2_jcs30")]
 layout_mode = 1

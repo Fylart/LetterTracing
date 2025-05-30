@@ -5,11 +5,14 @@
 [sub_resource type="GDScript" id="GDScript_lxpm3"]
 script/source = "extends TextureProgressBar
 @onready var timer: Timer = $Timer
-@export var customStart:float = 0
+@export var orderID:int = 0
+#@export var customStart:float = 0
 @export var halfCircle:bool = true
 @export var restart:bool = true
 @export var reverse:bool = false
 @export var debug:bool = true
+
+var finished:bool = false
 
 func _process(delta: float) -> void:
 	if not debug:
@@ -85,7 +88,7 @@ func set_value_from_mouse(mouse_pos):
 		
 	
 	if restart:
-		timer.start(1)
+		timer.start(0.3)
 
 
 
@@ -100,9 +103,11 @@ func _on_value_changed(value: float) -> void:
 	#stays the progress in the 100 if completed
 	if halfCircle == true and value == max_value/2 :
 		value = max_value/2
-		self.set_process_mode(PROCESS_MODE_DISABLED)
+		finished = true
+		#self.set_process_mode(PROCESS_MODE_DISABLED)
 	elif value == max_value and halfCircle == false:
-		self.set_process_mode(PROCESS_MODE_DISABLED)
+		finished = true
+		#self.set_process_mode(PROCESS_MODE_DISABLED)
 "
 
 [node name="CircleSliderComponent" type="TextureProgressBar"]

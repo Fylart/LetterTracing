@@ -6,6 +6,9 @@
 script/source = "extends ProgressBar
 @onready var timer: Timer = $Timer
 @export var debug:bool = true
+@export var orderID:int = 0
+
+var finished:bool = false
 
 func _process(delta: float) -> void:
 	if not debug:
@@ -51,7 +54,8 @@ func _on_timer_timeout() -> void:
 
 func _on_value_changed(value: float) -> void:
 	if value == max_value:
-		self.set_process_mode(PROCESS_MODE_DISABLED)
+		finished = true
+		
 "
 
 [node name="horizontal Slider Component" type="ProgressBar"]
