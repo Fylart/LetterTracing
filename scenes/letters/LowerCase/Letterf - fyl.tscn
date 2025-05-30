@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://docvjtsfcvkug"]
+[gd_scene load_steps=5 format=3 uid="uid://bhsltkgg03pux"]
 
 [ext_resource type="Theme" uid="uid://cyx1ngbtbpcvo" path="res://alphabet.tres" id="1_rwo2o"]
 [ext_resource type="PackedScene" uid="uid://cikkfswae2ji1" path="res://scenes/components/Circle slider component.tscn" id="2_ycw4s"]

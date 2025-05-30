@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cikkfswae2ji1" path="res://scenes/components/Circle slider component.tscn" id="4_qo3fk"]
 
 [node name="Letterf" type="Label"]
+clip_children = 2
 offset_right = 40.0
 offset_bottom = 23.0
 theme = ExtResource("1_cgex3")
@@ -13,19 +14,19 @@ text = "f"
 
 [node name="CircleSliderComponent" parent="." instance=ExtResource("4_qo3fk")]
 layout_mode = 1
-offset_left = 103.0
-offset_top = -176.0
-offset_right = 214.0
-offset_bottom = -21.0
+offset_left = 115.0
+offset_top = -179.0
+offset_right = 247.0
+offset_bottom = -11.0
 rotation = 1.58807
 halfCircle = true
 debug = false
 
 [node name="vertical slider Component" parent="." instance=ExtResource("2_hwwno")]
 layout_mode = 1
-offset_left = -53.0
+offset_left = -55.0
 offset_top = -127.0
-offset_right = -14.0
+offset_right = -20.0
 offset_bottom = 127.0
 
 [node name="horizontal Slider Component" parent="." instance=ExtResource("3_0jatk")]

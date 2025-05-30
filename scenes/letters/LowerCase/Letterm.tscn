@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cikkfswae2ji1" path="res://scenes/components/Circle slider component.tscn" id="3_c6o5h"]
 
 [node name="Label" type="Label"]
+clip_children = 2
 offset_right = 40.0
 offset_bottom = 23.0
 theme = ExtResource("1_ch77u")
