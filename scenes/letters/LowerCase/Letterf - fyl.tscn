@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bhsltkgg03pux"]
+[gd_scene load_steps=6 format=3 uid="uid://bhsltkgg03pux"]
 
 [ext_resource type="Theme" uid="uid://cyx1ngbtbpcvo" path="res://alphabet.tres" id="1_rwo2o"]
+[ext_resource type="Script" uid="uid://dwcl3pmyi6rvl" path="res://scenes/letters/letters.gd" id="2_cpjsp"]
 [ext_resource type="PackedScene" uid="uid://cikkfswae2ji1" path="res://scenes/components/Circle slider component.tscn" id="2_ycw4s"]
 [ext_resource type="PackedScene" uid="uid://c4yxhounmxx8v" path="res://scenes/components/vertical slider Component.tscn" id="3_n8qmq"]
 [ext_resource type="PackedScene" uid="uid://b5aji4m6788l3" path="res://scenes/components/horizontal slider Component.tscn" id="4_y01xc"]
@@ -9,6 +10,7 @@
 clip_children = 2
 theme = ExtResource("1_rwo2o")
 text = "f"
+script = ExtResource("2_cpjsp")
 
 [node name="CircleSliderComponent" parent="." instance=ExtResource("2_ycw4s")]
 layout_mode = 1
@@ -26,6 +28,7 @@ offset_left = -88.0
 offset_top = -183.0
 offset_right = -19.0
 offset_bottom = 129.0
+orderID = 1
 
 [node name="horizontal Slider Component" parent="." instance=ExtResource("4_y01xc")]
 layout_mode = 1
@@ -33,3 +36,4 @@ offset_left = -37.0
 offset_top = -72.0
 offset_right = 74.0
 offset_bottom = -42.0
+orderID = 2
