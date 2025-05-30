@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://wd4ujsckhet8"]
+[gd_scene load_steps=5 format=3 uid="uid://wd4ujsckhet8"]
 
 [ext_resource type="Theme" uid="uid://cyx1ngbtbpcvo" path="res://alphabet.tres" id="1_1hch3"]
 [ext_resource type="PackedScene" uid="uid://c4yxhounmxx8v" path="res://scenes/components/vertical slider Component.tscn" id="2_au14q"]
+[ext_resource type="Script" uid="uid://dwcl3pmyi6rvl" path="res://scenes/letters/letters.gd" id="2_sa10u"]
 [ext_resource type="PackedScene" uid="uid://cikkfswae2ji1" path="res://scenes/components/Circle slider component.tscn" id="3_sa10u"]
 
 [node name="Label" type="Label"]
@@ -10,6 +11,7 @@ offset_right = 40.0
 offset_bottom = 23.0
 theme = ExtResource("1_1hch3")
 text = "n"
+script = ExtResource("2_sa10u")
 
 [node name="vertical slider Component" parent="." instance=ExtResource("2_au14q")]
 layout_mode = 1
@@ -26,6 +28,7 @@ offset_top = 33.0
 offset_right = 28.0
 offset_bottom = 224.0
 rotation = -1.55714
+orderID = 1
 halfCircle = true
 reverse = false
 debug = false
@@ -37,3 +40,4 @@ offset_top = -34.0
 offset_right = 88.0
 offset_bottom = 127.0
 rotation = -0.00169086
+orderID = 2
