@@ -7,6 +7,9 @@ script/source = "extends ProgressBar
 #const orderID:int = 0
 @export var orderID:int = 0
 
+@export var startThreshold:float = 0.5
+var startPoint:bool = false
+
 var finished:bool = false
 
 func _process(delta: float) -> void:
@@ -34,6 +37,23 @@ func set_value_from_mouse(mouse_y):
 	#overflow the progress bar.
 	#we use the size so it can adjust progressively
 	var ratio = clamp(mouse_y / size.y, 0, 1)
+	
+	
+	if Input.is_action_just_pressed(\"click\") and ratio < startThreshold:
+		startPoint = true
+	else:
+		if Input.is_action_just_pressed(\"click\"):
+			startPoint = false
+		#if not Input.is_action_pressed(\"click\"):
+			#startPoint = false
+			#return
+		
+	
+	
+	#if ratio > threshold:
+		#print(\"Clicked\")
+		#return
+	
 	#print(\"ratio: \", clamp(mouse_y / size.y, 0, 1))
 	
 	#so now we know where is the mouse located base on the ratio
@@ -41,8 +61,12 @@ func set_value_from_mouse(mouse_y):
 	#by subtracting the max to min, we can know the exact lenght of the value
 	#multiplying the difference to ratio we have, it will produce the exact value on 
 	#where its supposed to be
+	if not startPoint:
+		return
+		
 	value = ratio * (max_value - min_value)
 	timer.start(1)
+	
 
 
 

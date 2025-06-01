@@ -37,8 +37,6 @@ offset_right = 90.0002
 offset_bottom = 370.999
 rotation = -1.5708
 orderID = 1
-halfCircle = true
-restart = false
 debug = false
 
 [node name="vertical slider Component2" parent="." instance=ExtResource("2_2r86d")]

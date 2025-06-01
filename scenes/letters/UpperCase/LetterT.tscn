@@ -28,6 +28,7 @@ offset_left = -121.5
 offset_top = -167.0
 offset_right = 108.5
 offset_bottom = -117.0
+startThreshold = 0.25
 
 [node name="vertical slider Component" parent="." instance=ExtResource("3_kgxni")]
 layout_mode = 1

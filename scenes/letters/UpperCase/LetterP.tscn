@@ -30,8 +30,6 @@ offset_top = -155.0
 offset_right = 114.5
 offset_bottom = 25.0
 orderID = 2
-halfCircle = true
-restart = false
 reverse = false
 debug = false
 

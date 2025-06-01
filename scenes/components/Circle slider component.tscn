@@ -12,6 +12,9 @@ script/source = "extends TextureProgressBar
 @export var reverse:bool = false
 @export var debug:bool = true
 
+@export var startThreshold:float = 0.5
+var startPoint:bool = false
+
 var finished:bool = false
 
 func _process(delta: float) -> void:
@@ -66,7 +69,7 @@ func set_value_from_mouse(mouse_pos):
 	# I added 90 because the progress starts at the very top in which the 
 	# angle or radians starts from right so i just offsetted it
 	angle_deg = fmod(angle_deg - get_radial_initial_angle() + 360 + 90, 360)
-	print(angle_deg)
+	#print(angle_deg)
 	# Convert angle to progress value
 	var fill_ratio = angle_deg / radial_fill_degrees
 	fill_ratio = clamp(fill_ratio, 0, 1)	
@@ -77,7 +80,29 @@ func set_value_from_mouse(mouse_pos):
 		fill_ratio = 1.0 - fill_ratio
 	else:
 		set_fill_mode(FILL_CLOCKWISE)
+	
+	
+	print(fill_ratio)
+	if Input.is_action_just_pressed(\"click\") and fill_ratio < startThreshold:
+		if halfCircle:
+			if fill_ratio < (startThreshold / 2):
+				startPoint = true
+			else:
+				startPoint = false
+		else:
+			startPoint = true
 		
+	else:
+		if Input.is_action_just_pressed(\"click\"):
+			startPoint = false
+		if not Input.is_action_pressed(\"click\"):
+			startPoint = false
+			return
+	
+	if not startPoint:
+		return
+	
+	
 	if not halfCircle:		
 		value = min_value + fill_ratio * (max_value - min_value)
 	else:
@@ -128,7 +153,6 @@ texture_under = ExtResource("1_b80oy")
 texture_progress = ExtResource("1_b80oy")
 tint_under = Color(0, 0, 0, 0.317647)
 script = SubResource("GDScript_lxpm3")
-halfCircle = false
 reverse = true
 
 [node name="Timer" type="Timer" parent="."]
