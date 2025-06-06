@@ -45,7 +45,6 @@ offset_right = 245.5
 offset_bottom = 272.0
 rotation = 3.14159
 orderID = 3
-halfCircle = true
 restart = false
 reverse = false
 debug = false
