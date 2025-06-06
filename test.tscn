@@ -1,34 +1,51 @@
-[gd_scene load_steps=5 format=3 uid="uid://edahk7u2jyh"]
+[gd_scene load_steps=6 format=3 uid="uid://edahk7u2jyh"]
 
 [ext_resource type="PackedScene" uid="uid://d0lbmia44r8kd" path="res://scenes/letters/UpperCase/LetterC.tscn" id="3_6uqi0"]
-[ext_resource type="PackedScene" uid="uid://cbw80coege2i2" path="res://scenes/letters/UpperCase/LetterD.tscn" id="3_ppyta"]
+[ext_resource type="PackedScene" uid="uid://djyko53qml8yo" path="res://scenes/letters/UpperCase/LetterB.tscn" id="4_g14j6"]
 [ext_resource type="PackedScene" uid="uid://b51n8hc074j0a" path="res://scenes/letters/UpperCase/LetterF.tscn" id="4_ppyta"]
 [ext_resource type="PackedScene" uid="uid://du5bj1no6i835" path="res://scenes/letters/UpperCase/LetterE.tscn" id="4_ykrsh"]
+[ext_resource type="PackedScene" uid="uid://eoarerine843" path="res://scenes/letters/LowerCase/Lettera.tscn" id="5_ykrsh"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="LetterC" parent="." instance=ExtResource("3_6uqi0")]
-offset_left = 856.0
-offset_top = -84.0
-offset_right = 1141.0
-offset_bottom = 638.0
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
-[node name="LetterD" parent="." instance=ExtResource("3_ppyta")]
-offset_left = 304.0
-offset_top = -146.0
-offset_right = 597.0
-offset_bottom = 576.0
+[node name="LetterC" parent="CanvasLayer/HBoxContainer" instance=ExtResource("3_6uqi0")]
+layout_mode = 2
 
-[node name="LetterE" parent="." instance=ExtResource("4_ykrsh")]
-offset_left = 59.0
-offset_top = -148.0
-offset_right = 298.0
-offset_bottom = 574.0
+[node name="LetterE" parent="CanvasLayer/HBoxContainer" instance=ExtResource("4_ykrsh")]
+layout_mode = 2
 
-[node name="LetterF" parent="." instance=ExtResource("4_ppyta")]
-offset_left = 597.5
-offset_top = -107.0
-offset_right = 830.5
-offset_bottom = 615.0
+[node name="LetterF" parent="CanvasLayer/HBoxContainer" instance=ExtResource("4_ppyta")]
+layout_mode = 2
+
+[node name="LetterB" parent="CanvasLayer/HBoxContainer" instance=ExtResource("4_g14j6")]
+layout_mode = 2
+
+[node name="CircleSliderComponent" parent="CanvasLayer/HBoxContainer/LetterB" index="0"]
+offset_left = -60.0
+offset_right = 98.0
+
+[node name="CircleSliderComponent2" parent="CanvasLayer/HBoxContainer/LetterB" index="1"]
+offset_left = -72.0
+offset_right = 112.0
+
+[node name="vertical slider Component" parent="CanvasLayer/HBoxContainer/LetterB" index="5"]
+offset_left = -128.0
+offset_top = -161.0
+offset_right = -59.0
+offset_bottom = 133.0
+
+[node name="Lettera" parent="CanvasLayer/HBoxContainer" instance=ExtResource("5_ykrsh")]
+layout_mode = 2
+
+[editable path="CanvasLayer/HBoxContainer/LetterB"]
